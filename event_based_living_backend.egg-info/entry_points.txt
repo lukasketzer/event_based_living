@@ -1,0 +1,2 @@
+[console_scripts]
+event-service = event_service.__main__:main

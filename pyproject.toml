@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "event-based-living-backend"
+version = "0.1.0"
+description = "An intelligent event discovery and management system for Munich events"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "Lukas Ketzaer", email = "lukas.ketzer@gmail.com"}
+]
+keywords = ["events", "ai", "fastapi", "web-scraping", "vector-database"]
+
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+    "sqlalchemy",
+    "pydantic",
+    "google-api-python-client",
+    "python-dotenv",
+    "langchain",
+    "sentence-transformers",
+    "langchain-google-genai",
+    "langchain-core",
+    "langchain-huggingface",
+    "langchain-postgres",
+    "numpy",
+    "tavily-python",
+    "psycopg[binary]",
+    "einops",
+    "fastapi",
+    "uvicorn[standard]",
+]
+
+[project.scripts]
+event-service = "event_service.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["api*", "event_service*"]
+exclude = ["tests*"]

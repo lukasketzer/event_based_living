@@ -1,0 +1,16 @@
+requests
+beautifulsoup4
+sqlalchemy
+pydantic
+google-api-python-client
+python-dotenv
+langchain
+sentence-transformers
+langchain-google-genai
+langchain-core
+langchain-huggingface
+langchain-postgres
+numpy
+tavily-python
+psycopg[binary]
+einops
